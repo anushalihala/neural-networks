@@ -21,3 +21,10 @@ class Tanh:
     def grad(x):
         return 1 - Tanh.apply(x)**2
         
+class Linear:
+    def apply(x):
+        return x
+
+    def grad(x):
+        return np.ones(x.shape)
+        
