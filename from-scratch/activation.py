@@ -5,7 +5,7 @@ class Sigmoid:
         return 1/(1+np.exp(np.multiply(x,-1)))
 
     def grad(x):
-        return sigmoid(x)*(1-sigmoid(x))
+        return Sigmoid.apply(x)*(1-Sigmoid.apply(x))
 
 class Relu:
     def apply(x):
@@ -19,5 +19,5 @@ class Tanh:
         return np.tanh(x)
 
     def grad(x):
-        return 1-tanh(x)**2
+        return 1 - Tanh.apply(x)**2
         
