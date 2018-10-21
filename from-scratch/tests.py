@@ -63,5 +63,5 @@ X = np.array([[0,0,1,1], \
               [0,1,0,1]])
 Y = np.array([[0,1,1,0]])
 nn = NeuralNetwork([2,2,1],loss.LogisticLoss)
-nn.train(X,Y, epochs=500, learning_rate=1, output_frequency=100)
+nn.train(X,Y, epochs=1000, learning_rate=1, output_frequency=100)
 print(nn.predict(X))
