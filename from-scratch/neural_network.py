@@ -89,10 +89,10 @@ class NeuralNetwork:
             
             A_L = self.predict(X)
             
-            if i%output_frequency==0:
+            if (i+1)%output_frequency==0:
                 print('Cost at epoch',i+1,'=',self.loss.get_loss(Y,A_L))
             
             dA = self.loss.grad(Y,A_L)
-            for layer in self.model:
+            for layer in reversed(self.model):
                 dA = layer.backward(dA, learning_rate)
         

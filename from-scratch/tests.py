@@ -2,7 +2,6 @@ import numpy as np
 import activation
 import loss
 from neural_network import *
-import pdb
 
 #TODO: convert to unit tests
 #TODO: add more tests
