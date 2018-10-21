@@ -4,7 +4,7 @@ import loss
 from neural_network import *
 
 #TODO: convert to unit tests
-#TODO: add more tests
+#TODO: add more tests (with actual datasets)
 
 # TESTING LAYER
 #- testing forward() -
