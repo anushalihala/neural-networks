@@ -70,13 +70,13 @@ class NeuralNetwork:
             diff = hidden_no - len(activation_fns)
             activation_fns += [None]*diff #pad
         #replace 'None's (i.e. incorrect or missing activations) with Relu 
-        activation_fns = [activation.Relu if x is None else x for x in activation_fns]
+        activation_fns = [activation_dict['relu'] if x is None else x for x in activation_fns]
             
         #build model
         self.model = []
         for i in range(hidden_no):
             self.model.append( Layer(n[i], n[i+1], activation_fns[i]) )
-        self.model.append(Layer(n[-2], n[-1], activation.Linear))
+        self.model.append(Layer(n[-2], n[-1], activation_dict['linear']))
         
     def predict(self, X):
         A = X
